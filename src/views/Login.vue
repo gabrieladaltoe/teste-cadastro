@@ -54,7 +54,9 @@
         },
         methods: {
             onSubmit() {
-            alert(JSON.stringify(this.form))
+              if ( this.form.email == 'email@email.com' && this.form.password == '12345'){
+                this.$router.push('/register')
+              }
             },
             onReset() {
             this.form.email = ''
